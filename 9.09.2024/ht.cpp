@@ -1,8 +1,13 @@
 #include <iostream>
 using namespace std;
-
 int main () {
-	// Початок завдання
+        // Початок begin 2
+	double a, c; // Декларація змінних
+	cout << "Enter a: "; // Введення значення змінної
+	cin >> a;
+	c = a * a; // Розрахунок
+	cout << "Area of the square - " << c << "\n"; // Вивід результату
+	// Початок begin 10
 	double r1, r2, s1, s2, s3, pi; // Декларація змінних
 	pi = 3.14; // Введення пі
 	cout << "Enter R1 - "; // Введення R1
