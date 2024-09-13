@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 int main () {
-	int a;
-	int c;
+	double a, c;
 	cout << "Enter a: ";
 	cin >> a;
 	c = a * a;
