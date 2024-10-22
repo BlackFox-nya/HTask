@@ -26,30 +26,19 @@ int main(){
   cin >> b;
   cout << "Enter c - ";
   cin >> c;
-  if (a == b){ //Yandere simulator code and results for user
-  preres = 1;
+    if (a == b == c){ //Yandere simulator code and results for user
+      resl = 1;
+      cout << "This triangle in normal" << endl;
   }
-  if (b == c){
-  resl = 1;
-  }
-  if (preres == resl){
-  cout << "This triangle in normal" << endl;
-  }
-  else{
-  cout << "This triangle isn`t normal" << endl;
+    else{
+      cout << "This triangle isn`t normal" << endl;
   }
  
   cout << "Math2" << endl; //Math2
   double x; //Introduction of variables
   double y;
-xenity:
-  cout << "Enter x - "; //Message for user
+  cout << "Enter x(must be positive and not to be 0) - "; //Message for user
   cin >> x;
-
-  if (x <= 0){                                      // Testing is x positive and not zero
-    cout << "X must be positive and not to be 0 \n";
-    goto xenity;
-  }
 
   double radiansForTan = degToRad(13); //Calculation
   double radians = degToRad(x);
