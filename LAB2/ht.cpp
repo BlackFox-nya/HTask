@@ -26,7 +26,7 @@ int main(){
   cin >> b;
   cout << "Enter c - ";
   cin >> c;
-    if (a == b == c){ //Yandere simulator code and results for user
+    if (a == b == c){ //Displaying results
       resl = 1;
       cout << "This triangle in normal" << endl;
   }
