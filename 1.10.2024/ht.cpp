@@ -42,8 +42,14 @@ int main(){
   cout << "Math2" << endl; //Math2
   double x; //Introduction of variables
   double y;
+xenity:
   cout << "Enter x - "; //Message for user
   cin >> x;
+
+  if (x <= 0){                                      // Testing is x positive and not zero
+    cout << "X must be positive and not to be 0 \n";
+    goto xenity;
+  }
 
   double radiansForTan = degToRad(13); //Calculation
   double radians = degToRad(x);
