@@ -18,7 +18,7 @@ int main(){
   cout << "Second number is - " << secondn << endl;
   
   cout << "Boolean30" << endl; //Boolean30
-  bool resl, preres; //Introduction of variables
+  bool resl; //Introduction of variables
   double a, b, c;
   cout << "Enter a - "; //Messages for user
   cin >> a;
