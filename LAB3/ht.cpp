@@ -4,16 +4,16 @@ using namespace std;
 #define _USE_MATH_DEFINES
 
 void if20(); //if20 declaration
-void geo36(); //geo36 declaration
+void geo36_3(); //geo36 declaration
 
 int main(){
     int crs; //declaration of variable
-    cout << "Select task \n" << "1 - if20 \n" << "2 - geo36 \n" << "Select - "; //menu for user 
+    cout << "Select task \n" << "1 - if20 \n" << "2 - geo36_2 \n" << "3 - geo36_3 \n" << "Select - "; //menu for user 
     cin >> crs;
     switch (crs){ //menu backend
         case 1: if20(); break;
-        case 2: geo36(); break;
-        default: cout << "Only 1 or 2 \n"; break;
+        case 3: geo36_3(); break;
+        default: cout << "Only 1, 2 or 3!!! \n"; break;
     }
     return 0;
 }
@@ -37,12 +37,16 @@ void if20(){ // if20 realisation
 
 }
 
-void geo36(){ //geo36 realisation
+void geo36_3(){ //geo36 realisation
     cout << "************* GEO 36 *****************" << endl;
-    double r, scr, scrq; //introduction of variables
+    double r, scr, scrq, p, al, sl; //introduction of variables
     cout << "Enter circle radius - "; //message for user
     cin >> r;
-    scr = M_PI * pow(r, 2); //calculation
-    scrq = scr / 4.0;
-    cout << "Answer is - " << scrq; //returning results for user
+    scr = M_PI * pow(r, 2); //calculation of area
+    scrq = scr / 4.0; //calculation done
+    sl = r * 2;
+    al = ((M_PI * r) / 180) * 90;
+    p = sl + al;
+    cout << endl << "Area is - " << scrq << endl << "Perimeter is - " << p << endl;
+    
 }
