@@ -56,44 +56,38 @@ void if20(){ // if20 realisation
 
 void geo36_2(){
     cout << "************* GEO 36_2 *****************" << endl;
-    double ax, ay, bx, by, cx, cy, px, py, r;
-
-    cout << "R - ";
-    cin >> r;
-    ax = 0;
-    ay = 0;
-    bx = 0;
+    double ax, ay, bx, by, cx, cy, px, py, r; //declaration of variables
+    cout << "R - "; //message for user
+    cin >> r; //Input
+    ax = 0; //calculation of 3 main points: A, B, C
+    ay = 0; //A is plased in the beginning of coordinates(0, 0)
+    bx = 0; //B is placed on OY axis. X = 0, Y is calculated using Pythagorean theorem
     by = sqrt(pow(r, 2) + pow(r, 2));
-    cx = by / 2;
+    cx = by / 2; //C is centre of the circle. X is calculated using by coordinate. Y is calculated using Pythagorean theorem
     cy = sqrt(pow(r, 2) - pow(cx, 2));
-    cout << "A - " << ax  << " " << ay << endl << "B - " << bx << " " << by << endl << "C - " << cx << " " << cy << endl;
-    double distAB = pointDist(ax, ay, bx, by);
+    double distAB = pointDist(ax, ay, bx, by); //calculation of triangle sides lengthes
     double distAC = pointDist(ax, ay, cx, cy);
     double distBC = pointDist(bx, by, cx, cy);
-    double S_org = triangArea(distAB, distAC, distBC);
-    cout << "Enter point (x, y) - ";
-    cin >> px >> py;
-    double distPA = pointDist(px, py, ax, ay);
+    double S_org = triangArea(distAB, distAC, distBC); //calculation of triangle area
+    cout << "Enter point (x, y) - "; //message for user
+    cin >> px >> py; //user input
+    double distPA = pointDist(px, py, ax, ay); //calculations of point to triangle point distance
     double distPB = pointDist(px, py, bx, by);
     double distPC = pointDist(px, py, cx, cy);
-    double S_PAB = triangArea(distAB, distPB, distPA);
+    double S_PAB = triangArea(distAB, distPB, distPA); //calculation of area of sub triangles
     double S_PBC = triangArea(distPB, distPC, distBC);
     double S_PCA = triangArea(distPA, distPC, distAC);
-    double S_point = S_PAB + S_PBC + S_PCA;
-    char S_org_char = S_org;
-    char S_point_char = S_point;
-    double rsquared = pow(r, 2);
+    double S_point = S_PAB + S_PBC + S_PCA; //sum of the sub triangles area
+    char S_org_char = S_org; //double to char conversion
+    char S_point_char = S_point; //double to char conversion
+    double rsquared = pow(r, 2); //separate calculations for if
     double leftSide = pow(px - cx, 2) + pow(py - cy, 2);
-    if (S_point_char == S_org_char || leftSide <= rsquared){
+    if (S_point_char == S_org_char || (leftSide <= rsquared && px >=0 && py <= 0)){ //is point places in brown zone
         cout << "Point is in brown region \n";
     }
     else {
         cout << "Point isn`t in brown region \n";
     }
-    
-    cout << "AB - " << distAB << endl << "AC - " << distAC << endl << "BC - " << distBC << endl << "Area - " << S_org << endl << "Point area - " << S_point << endl;
-
-
 }
 
 void geo36_3(){ //geo36_3 realisation
@@ -104,10 +98,9 @@ void geo36_3(){ //geo36_3 realisation
     cin >> r;
     scr = M_PI * pow(r, 2); //calculation of area
     scrq = scr / 4.0; //calculation done
-    sl = r * 2;
+    sl = r * 2; //calculation of chord
     al = ((M_PI * r) / 180) * 90;
     hl = 2 * r * sin(forsin);
     p = sl + al + hl;
-    cout << endl << "Area is - " << scrq << endl << "Perimeter is - " << p << endl;
-    
+    cout << endl << "Area is - " << scrq << endl << "Perimeter is - " << p << endl; //results for user
 }
