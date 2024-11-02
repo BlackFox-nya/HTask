@@ -18,17 +18,15 @@ int main(){
   cout << "Second number is - " << secondn << endl;
   
   cout << "Boolean30" << endl; //Boolean30
-  bool resl; //Introduction of variables
-  double a, b, c;
+  double a, b, c;//Introduction of variables
   cout << "Enter a - "; //Messages for user
   cin >> a;
   cout << "Enter b - ";
   cin >> b;
   cout << "Enter c - ";
   cin >> c;
-    if (a == b == c){ //Displaying results
-      resl = 1;
-      cout << "This triangle in normal" << endl;
+    if (a == b && a == c && b == c){ //Displaying results
+      cout << "This triangle is normal" << endl;
   }
     else{
       cout << "This triangle isn`t normal" << endl;
