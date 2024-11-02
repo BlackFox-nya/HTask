@@ -64,11 +64,29 @@ void geo36_2(){
     by = sqrt(pow(r, 2) + pow(r, 2));
     cx = by / 2;
     cy = sqrt(pow(r, 2) - pow(cx, 2));
+    cout << "A - " << ax  << " " << ay << endl << "B - " << bx << " " << by << endl << "C - " << cx << " " << cy << endl;
     double distAB = pointDist(ax, ay, bx, by);
     double distAC = pointDist(ax, ay, cx, cy);
     double distBC = pointDist(bx, by, cx, cy);
-    double orgS = triangArea(distAB, distAC, distBC);
-    cout << "AB - " << distAB << endl << "AC - " << distAC << endl << "BC - " << distBC << endl << "Area - " << orgS << endl;
+    double S_org = triangArea(distAB, distAC, distBC);
+    cout << "Enter point (x, y) - ";
+    cin >> px >> py;
+    double distPA = pointDist(px, py, ax, ay);
+    double distPB = pointDist(px, py, bx, by);
+    double distPC = pointDist(px, py, cx, cy);
+    double S_PAB = triangArea(distAB, distPB, distPA);
+    double S_PBC = triangArea(distPB, distPC, distBC);
+    double S_PCA = triangArea(distPA, distPC, distAC);
+    double S_point = S_PAB + S_PBC + S_PCA;
+    char S_org_char = S_org;
+    char S_point_char = S_point;
+    if (S_point_char == S_org_char){
+        cout << "Point is in triangle \n";
+    }
+    if (S_point_char != S_org_char) {
+        cout << "Point isn`t in triangle \n";
+    }
+    cout << "AB - " << distAB << endl << "AC - " << distAC << endl << "BC - " << distBC << endl << "Area - " << S_org << endl << "Point area - " << S_point << endl;
 
 
 }
