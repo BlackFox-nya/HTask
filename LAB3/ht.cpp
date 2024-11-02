@@ -4,18 +4,19 @@ using namespace std;
 #define _USE_MATH_DEFINES
 
 void if20(); //if20 declaration
-void geo36_2();
-void geo36_3(); //geo36 declaration
+void geo36_2(); //geo36_2 declaration
+void geo36_3(); //geo36_3 declaration
 
 double degToRad(double x) { //Degrees to radians
     return x * (M_PI / 180.0);
 }
 
-double pointDist(double ax, double ay, double bx, double by){
+double pointDist(double ax, double ay, double bx, double by){ //calculation of distance between 2 points
     double dist = sqrt(pow(bx - ax, 2.0) + pow(by - ay, 2.0));
     return dist;
 }
-double triangArea(double AB, double AC, double BC){
+
+double triangArea(double AB, double AC, double BC){ //calculation of triangle area
     double p = (AB + AC + BC) / 2.0;
     double S = sqrt(p * (p - AB) * (p - AC) * (p - BC));
     return S;
@@ -56,6 +57,7 @@ void if20(){ // if20 realisation
 void geo36_2(){
     cout << "************* GEO 36_2 *****************" << endl;
     double ax, ay, bx, by, cx, cy, px, py, r;
+
     cout << "R - ";
     cin >> r;
     ax = 0;
@@ -80,18 +82,21 @@ void geo36_2(){
     double S_point = S_PAB + S_PBC + S_PCA;
     char S_org_char = S_org;
     char S_point_char = S_point;
-    if (S_point_char == S_org_char){
-        cout << "Point is in triangle \n";
+    double rsquared = pow(r, 2);
+    double leftSide = pow(px - cx, 2) + pow(py - cy, 2);
+    if (S_point_char == S_org_char || leftSide <= rsquared){
+        cout << "Point is in brown region \n";
     }
-    if (S_point_char != S_org_char) {
-        cout << "Point isn`t in triangle \n";
+    else {
+        cout << "Point isn`t in brown region \n";
     }
+    
     cout << "AB - " << distAB << endl << "AC - " << distAC << endl << "BC - " << distBC << endl << "Area - " << S_org << endl << "Point area - " << S_point << endl;
 
 
 }
 
-void geo36_3(){ //geo36 realisation
+void geo36_3(){ //geo36_3 realisation
     cout << "************* GEO 36_3 *****************" << endl;
     double r, scr, scrq, p, al, sl, hl, forsin; //introduction of variables
     forsin = degToRad(45);
