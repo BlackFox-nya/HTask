@@ -19,24 +19,27 @@ int main(){
     return 0;
 }
 
-void RectPS(double x1, double y1, double x2, double y2, double &P, double &S){
-    double w = abs(x2 - x1);
-    double h = abs(y2 - y1);
+void RectPS(double x1, double y1, double x2, double y2, double &P, double &S){ // RectPS function
+    double w = abs(x2 - x1); //Calculate absolute value of x2 - x1
+    double h = abs(y2 - y1); //Calculate absolute value of y2 - y1
     
-    P = w + w + h + h;
-    S = w * h;
+    P = w + w + h + h; //Perimeter calculation
+    S = w * h; //Area calculation
 }
 
-void proc5(){
+void proc5(){ //Proc 5 function
     cout << "************* Proc 5 *****************" << endl;
+    //Declaration of variables
     double xx1, yy1, xx2, yy2, p, s;
     int i = 0;
+    
+    //Loop body for 3 calculations
     while(i < 3){
-        i++;
-        cout << "Enter x1, y1, x2, y2" << endl;
-        cin >> xx1 >> yy1 >> xx2 >> yy2;
-        RectPS(xx1, yy1, xx2, yy2, p, s);
-        cout << "Rectangle " << i << " - " << "Perimeter - " << p << " " << "Area - " << s << endl;
+        i++; 
+        cout << "Enter x1, y1, x2, y2" << endl; //message for user
+        cin >> xx1 >> yy1 >> xx2 >> yy2; //write numbers for variables
+        RectPS(xx1, yy1, xx2, yy2, p, s); //Calculate perimeter and area usinf RectPS() function
+        cout << "Rectangle " << i << " - " << "Perimeter - " << p << " " << "Area - " << s << endl; //showing results for user
     }
 }
 
