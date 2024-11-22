@@ -43,12 +43,8 @@ void proc5(){
 void bool30(){
     cout << "************* Boolean 30 *****************" << endl;
     double a, b, c;//Introduction of variables
-    cout << "Enter a - "; //Messages for user
-    cin >> a;
-    cout << "Enter b - ";
-    cin >> b;
-    cout << "Enter c - ";
-    cin >> c;
+    cout << "Enter a, b, c "; //Messages for user
+    cin >> a >> b >> c;
     if (a == b && a == c && b == c){ //Displaying results
       cout << "This triangle is normal" << endl;
     }
