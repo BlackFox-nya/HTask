@@ -43,27 +43,78 @@ void proc5(){ //Proc 5 function
     }
 }
 
-void bool30(){
-    cout << "************* Boolean 30 *****************" << endl;
-    double a, b, c;//Introduction of variables
-    cout << "Enter a, b, c "; //Messages for user
-    cin >> a >> b >> c;
-    if (a == b && a == c && b == c){ //Displaying results
-      cout << "This triangle is normal" << endl;
+void trulse(int a, int b, int c, bool &tf){
+    if (a == b && a == c && b == c){ //Returning results
+      tf = true;
     }
     else{
-      cout << "This triangle isn`t normal" << endl;
+      tf = false;
     }
- 
+}
+
+void testInput(int a, int b, int c, bool &corr){
+    if(a>0 && b>0 && c > 0){ // Testing is a, b, c are positive
+        corr = true;
+    }
+    else{
+        corr = false;
+    }
+}
+
+void bool30(){
+    cout << "************* Boolean 30 *****************" << endl;
+    int a, b, c;//Introduction of variables
+    bool cer, tlfs;
+    cout << "Enter a, b, c "; //Messages for user
+    cin >> a >> b >> c;
+    testInput(a, b, c, cer); // Testing is a, b, c are positive
+    if(cer == true){ //Testig is test ended up successfully. If yes - proceed to triangle calculation. If - not - display error
+        trulse(a, b, c, tlfs); //Triangle calculation
+    }
+    else{
+        cout << "Input is incorrect. It must be integer and positive. \n"; //Displaying error
+    }
+    if (cer = true && tlfs == true){ //Displaying results
+        cout << "Triangle is normal. \n";  
+    }
+    if (cer = true && tlfs == false){
+        cout << "Triangle isn`t normal. \n";
+    }
+
+}
+
+void intInput(int &numOUT, bool &fasletrue){
+    int num, res = 0;
+    cout << "Enter 3-digit number - ";  //Message for user
+    cin >> num;
+    res = to_string(abs(num)).size(); //Calculating size of num
+    if(res == 3){ //If num == 3 - return numOUT and falsetrue, if not - display error
+        numOUT = num;
+        fasletrue = true;
+    }
+    else{
+        cout << "It must be 3-digit number \n";
+    }
+}
+
+void compINT(int numIN, int &lastn, int &secondn){
+    lastn = abs(numIN % 10); //Calculation 
+    secondn = abs((numIN / 10) % 10);
+  
+}
+
+void outINT(int ln, int sn){
+    cout << "Last number is - " << ln << endl; // Showing results
+    cout << "Second number is - " << sn << endl;
 }
 
 void int10(){
     cout << "************* Integer 10 *****************" << endl;
-    int num, lastn, secondn; //Introduction of variables
-    cout << "Enter 3-digit number - ";  //Message for user
-    cin >> num;
-    lastn = num % 10; //Calculation 
-    secondn = (num / 10) % 10;
-    cout << "Last number is - " << lastn << endl; // Showing results
-    cout << "Second number is - " << secondn << endl;
+    int lsn, sdn, num; //Declaration of variables
+    bool ft;
+    intInput(num, ft); //Using of intInput to get and test num
+    if(ft == true){ //Proceed further if ft == true
+        compINT(num, lsn, sdn);
+        outINT(lsn, sdn);
+    }
 }
