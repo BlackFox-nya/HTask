@@ -19,6 +19,15 @@ int main(){
     return 0;
 }
 
+bool isInRange(double x){
+    if(x <= 100 && x >= -100){ //Testing is x in range
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 void RectPS(double x1, double y1, double x2, double y2, double &P, double &S){ // RectPS function
     double w = abs(x2 - x1); //Calculate absolute value of x2 - x1
     double h = abs(y2 - y1); //Calculate absolute value of y2 - y1
@@ -35,50 +44,55 @@ void proc5(){ //Proc 5 function
     
     //Loop body for 3 calculations
     while(i < 3){
-        i++; 
         cout << "Enter x1, y1, x2, y2" << endl; //message for user
         cin >> xx1 >> yy1 >> xx2 >> yy2; //write numbers for variables
+        if(isInRange(xx1) == true && isInRange(yy1) == true && isInRange(xx2) == true && isInRange(yy2) == true){
         RectPS(xx1, yy1, xx2, yy2, p, s); //Calculate perimeter and area usinf RectPS() function
+        i++;
         cout << "Rectangle " << i << " - " << "Perimeter - " << p << " " << "Area - " << s << endl; //showing results for user
+        }
+        else{
+            cout << "Wrong input \n";
+        }
     }
 }
 
-void trulse(int a, int b, int c, bool &tf){
+bool trulse(int a, int b, int c){
     if (a == b && a == c && b == c){ //Returning results
-      tf = true;
+      return true;
     }
     else{
-      tf = false;
+      return false;
+      cout << "А какого хрена ?";
     }
 }
 
-void testInput(int a, int b, int c, bool &corr){
-    if(a>0 && b>0 && c > 0){ // Testing is a, b, c are positive
-        corr = true;
+void testInput(int &a, int &b, int &c, bool &certif){
+    cout << "Enter a, b, c "; //Messages for user
+    cin >> a >> b >> c;
+    if(a > 0 && b > 0 && c > 0){ // Testing is a, b, c are positive as said in document
+        certif = true;
     }
     else{
-        corr = false;
+        certif = false;
     }
 }
 
 void bool30(){
     cout << "************* Boolean 30 *****************" << endl;
     int a, b, c;//Introduction of variables
-    bool cer, tlfs;
-    cout << "Enter a, b, c "; //Messages for user
-    cin >> a >> b >> c;
-    testInput(a, b, c, cer); // Testing is a, b, c are positive
-    if(cer == true){ //Testig is test ended up successfully. If yes - proceed to triangle calculation. If - not - display error
-        trulse(a, b, c, tlfs); //Triangle calculation
+    bool cer, trfs;
+    testInput(a, b, c, cer);
+    trfs = trulse(a, b, c);
+    if (cer == true && trfs == true){ //Displaying results
+        cout << "Triangle is normal. \n";  
+    }
+    else if (cer == true && trfs == false){
+        cout << "Triangle isn`t normal. \n";
+        
     }
     else{
         cout << "Input is incorrect. It must be integer and positive. \n"; //Displaying error
-    }
-    if (cer = true && tlfs == true){ //Displaying results
-        cout << "Triangle is normal. \n";  
-    }
-    if (cer = true && tlfs == false){
-        cout << "Triangle isn`t normal. \n";
     }
 
 }
