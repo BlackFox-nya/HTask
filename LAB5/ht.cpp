@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Function Prototypes
+// Functions
 void geo36();
 bool inBrownRegion(double r, double x, double y);
 double pointDist(double ax, double ay, double bx, double by);
@@ -12,16 +12,28 @@ double triangArea(double AB, double AC, double BC);
 void eq1();
 void eq2();
 
+bool useless(int mn){
+    if(mn > 0 && mn < 5){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+// Function
 int main() {
-    cout << "Select task: \n" << "1: GEO 36 \n" << "2: Equation 1 \n" << "3: Equation 2 \n" << "You select - ";
+    cout << "Select task: \n" << "1: GEO 36 \n" << "2: Equation 1 \n" << "3: Equation 2 \n" << "4: Exit \n" << "You select - ";
     int crs;
     cin >> crs;
+    useless(crs);
     switch (crs)
     {
-    case 1: geo36(); break;
-    case 2: eq1(); break;
-    case 3: eq2(); break;
-    default: cout << "Wrong input"; break;
+    case 1: geo36(); main();
+    case 2: eq1(); main();
+    case 3: eq2(); main();
+    case 4: break;
+    default: cout << "Wrong input"; main();
     }
     return 0;
 }
