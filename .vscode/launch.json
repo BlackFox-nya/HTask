@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/home/blackfox/source/HTask/LAB4",
-      "program": "/home/blackfox/source/HTask/LAB4/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/afoxy/source/HTask/LAB5",
+      "program": "c:/Users/afoxy/source/HTask/LAB5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
