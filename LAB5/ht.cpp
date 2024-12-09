@@ -134,9 +134,9 @@ bool inBrownRegion(double r, double x, double y) {
 
 // Function to compute the factorial of a number
 double factorial(double n) {
-    if (n == 0 || n == 1) return 1;
-    long long result = 1;
-    for (int i = 2; i <= n; ++i) {
+    if (n <= 1) return 1;
+    long result = 1;
+    for (int i = 2; i <= n; i++) {
         result *= i;
     }
     return result;
@@ -163,7 +163,7 @@ void eq1() {
     int n;
 
     // Get user input
-    cout << "Enter the value of x (in radians): ";
+    cout << "Enter the value of x: ";
     cin >> xin;
     x = degToRad(xin);
 
@@ -195,13 +195,13 @@ void eq2() {
     int terms;
     
     // Input value for x and the number of terms for approximation
-    std::cout << "Enter the value of x: ";
-    std::cin >> x;
-    std::cout << "Enter the number of terms to compute (higher gives more accuracy): ";
-    std::cin >> terms;
+    cout << "Enter the value of x: ";
+    cin >> x;
+    cout << "Enter the number of terms to compute (higher gives more accuracy): ";
+    cin >> terms;
 
     // Calculate and display the result
     double result = computeSeries(x, terms);
-    std::cout << "The computed value of the series is: " << result << std::endl;
+    cout << "The computed value of the series is: " << result << std::endl;
 
 }
