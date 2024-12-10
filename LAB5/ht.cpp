@@ -17,6 +17,7 @@ double safeFactorial(int n);
 double computeSeries(double x, int n);
 double degToRad(double x);
 double sineTaylorSeries(double x, int terms);
+bool isEven(int x);
 
 // Main function
 int main() {
@@ -118,6 +119,11 @@ double triangArea(double AB, double AC, double BC) {
     return sqrt(p * (p - AB) * (p - AC) * (p - BC));
 }
 
+bool isEven(int x)
+{
+    return (x % 2) == 0;
+}
+
 // Equation 1 functionality
 void eq1() {
     double xin, x;
@@ -132,7 +138,18 @@ void eq1() {
 
     double result = sineTaylorSeries(x, n);
 
-    cout << "The sine of " << xin << " using " << n << " terms is: " << result << endl;
+    cout << "The answer of " << xin << " using " << n << " terms is: " << result << endl;
+    if(isEven(n)){
+    for (int i = 0; i <= n; i += 3) {
+        cout << "Even is " << sineTaylorSeries(x, i) << endl;
+    }
+    }
+    else{
+        for (int i = 0; i <= n; i += 4) {
+        cout << "Odd is " << sineTaylorSeries(x, i) << endl;
+    }
+    }
+
 }
 
 double degToRad(double x) {
