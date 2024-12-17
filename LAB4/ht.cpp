@@ -63,7 +63,6 @@ bool trulse(int a, int b, int c){
     }
     else{
       return false;
-      cout << "А какого хрена ?";
     }
 }
 
