@@ -12,7 +12,9 @@ void array111();
 void by3multiplyer(int arr[], int arrN); //Function which multiplies each odd number in array by 3
 
 int main() {
-    cout << "Selection menu: 1 - Array_8; 2 - Array_111" << endl << "You select - "; //Message for user
+    int lp = 1;
+    while(lp == 1){
+    cout << "Selection menu: 1 - Array_8; 2 - Array_111; 3 - Exit;" << endl << "You select - "; //Message for user
     int crs;
     cin >> crs;
     switch (crs) { //Menu
@@ -22,10 +24,14 @@ int main() {
         case 2:
             array111(); 
             break;
+        case 3:
+            lp = 0;
+            break;
         default: 
             cout << "Wrong input" << endl; 
             break;
     }
+}
 }
 
 void input_arr(int arrN, int arr[]) { //Function for array input
