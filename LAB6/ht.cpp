@@ -38,10 +38,14 @@ void input_arr(int arrN, int arr[]) { //Function for array input
     for (int i = 0; i < arrN; i++) {
         cin >> arr[i];
     }
+    cout << "\nYou entered: ";
+    for (int i = 0; i < arrN; i++) {
+        cout << arr[i] << " ";
+    }
 }
 
 void arrSort5(int arr[], int arrN){ 
-    cout << "Multiples of 5: ";
+    cout << "\nMultiples of 5: ";
     int mulN = 0;
     for (int i = 0; i < arrN; i++){
         if (arr[i] % 5 == 0){
@@ -78,7 +82,7 @@ bool isOdd(int number) {
 }
 
 void by3multiplyer(int arr[], int arrN){
-    cout << "Multiplying by 3 odd numbers ";
+    cout << "\nMultiplying by 3 odd numbers ";
     int mulN = 0;
     for (int i = 0; i < arrN; i++){
         if (isOdd(arr[i]) == true){
@@ -86,7 +90,6 @@ void by3multiplyer(int arr[], int arrN){
             
         }
     }
-    
 }
 
 void array111(){
