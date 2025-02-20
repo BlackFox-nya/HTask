@@ -1,10 +1,19 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_SIZE = 100;
+const int MAX_SIZE = 20;
 
 // Функція для введення матриці
-void inputMatrix(int matrix[][MAX_SIZE], int M, int N) {
+void inputMatrix(int matrix[][MAX_SIZE], int &M, int &N) {
+    
+    cout << "Enter matrix size(row col): " << endl;
+    cin >> M >> N;
+    
+    if (M > MAX_SIZE || N > MAX_SIZE) {
+        cout << "0" << endl;
+        return;
+    }
+
     for (int i = 0; i < M; ++i) {
         for (int j = 0; j < N; ++j) {
             cin >> matrix[i][j];
@@ -32,6 +41,16 @@ bool isMinInCol(int matrix[][MAX_SIZE], int currentRow, int currentCol, int M) {
     return true;
 }
 
+void printMatrix(int matrix[][MAX_SIZE], int M, int N) {
+    cout << "Matrix: " << endl;
+    for (int i = 0; i < M; ++i) {
+        for (int j = 0; j < N; ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 // Пошук та виведення результатів
 void findAndPrintResults(int matrix[][MAX_SIZE], int M, int N) {
     bool found = false;
@@ -54,15 +73,10 @@ void findAndPrintResults(int matrix[][MAX_SIZE], int M, int N) {
 
 int main() {
     int M, N;
-    cin >> M >> N;
-    
-    if (M > MAX_SIZE || N > MAX_SIZE) {
-        cout << "0" << endl;
-        return 0;
-    }
     
     int matrix[MAX_SIZE][MAX_SIZE];
     inputMatrix(matrix, M, N);      // Введення даних
+    printMatrix(matrix, M, N);      // Виведення матриці
     findAndPrintResults(matrix, M, N); // Обробка та виведення
     
     return 0;
