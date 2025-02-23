@@ -3,11 +3,39 @@ using namespace std;
 
 const int MAX_SIZE = 20;
 
+int matrix43();
+int matrix83();
+
+int main() {
+    int lp = 1;
+    while(lp == 1){
+    cout << "Selection menu: 1 - Matrix_46; 2 - Matrix_83; 3 - Exit;" << endl << "You select - "; //Message for user
+    int crs;
+    cin >> crs;
+    switch (crs) { //Menu
+        case 1: 
+            matrix43(); 
+            break;
+        case 2:
+            matrix83(); 
+            break;
+        case 3:
+            lp = 0;
+            break;
+        default: 
+            cout << "Wrong input" << endl; 
+            break;
+    }
+}
+}
+
+
 // Функція для введення матриці
 void inputMatrix(int matrix[][MAX_SIZE], int &M, int &N) {
     
     cout << "Enter matrix size(row col): " << endl;
     cin >> M >> N;
+    cout << "Enter matrix elements: " << endl;
     
     if (M > MAX_SIZE || N > MAX_SIZE) {
         cout << "0" << endl;
@@ -19,6 +47,7 @@ void inputMatrix(int matrix[][MAX_SIZE], int &M, int &N) {
             cin >> matrix[i][j];
         }
     }
+    cout << "You entered this";
 }
 
 // Перевірка, чи є елемент максимальним у своєму рядку
@@ -42,7 +71,7 @@ bool isMinInCol(int matrix[][MAX_SIZE], int currentRow, int currentCol, int M) {
 }
 
 void printMatrix(int matrix[][MAX_SIZE], int M, int N) {
-    cout << "Matrix: " << endl;
+    cout << " matrix: " << endl;
     for (int i = 0; i < M; ++i) {
         for (int j = 0; j < N; ++j) {
             cout << matrix[i][j] << " ";
@@ -58,7 +87,7 @@ void findAndPrintResults(int matrix[][MAX_SIZE], int M, int N) {
         for (int j = 0; j < N; ++j) {
             if (isMaxInRow(matrix[i], j, N) && isMinInCol(matrix, i, j, M)) {
                 if (!found) {
-                    cout << "Знайдені елементи: ";
+                    cout << "Found elements: ";
                     found = true;
                 }
                 cout << matrix[i][j] << " ";
@@ -71,13 +100,35 @@ void findAndPrintResults(int matrix[][MAX_SIZE], int M, int N) {
     cout << endl;
 }
 
-int main() {
+void zeroingMatrix(int matrix[][MAX_SIZE], int M) {
+    for (int i = 0; i < M; ++i) {
+        for (int j = 0; j < M; ++j) {
+            int condition = (i >= j) && (i + j >= M - 1);
+            matrix[i][j] *= !condition;
+        }
+    }
+    cout << "Zeroed ";
+}
+
+int matrix43() {
     int M, N;
     
     int matrix[MAX_SIZE][MAX_SIZE];
-    inputMatrix(matrix, M, N);      // Введення даних
-    printMatrix(matrix, M, N);      // Виведення матриці
-    findAndPrintResults(matrix, M, N); // Обробка та виведення
+    inputMatrix(matrix, M, N);     
+    printMatrix(matrix, M, N);      
+    findAndPrintResults(matrix, M, N);
+    
+    return 0;
+}
+
+int matrix83() {
+    int M, N;
+    int matrix[MAX_SIZE][MAX_SIZE];
+    
+    inputMatrix(matrix, M, N);
+    printMatrix(matrix, M, N);
+    zeroingMatrix(matrix, M);
+    printMatrix(matrix, M, N);
     
     return 0;
 }
