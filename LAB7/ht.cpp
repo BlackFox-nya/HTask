@@ -3,7 +3,7 @@ using namespace std;
 
 const int MAX_SIZE = 20;
 
-int matrix43();
+int matrix46();
 int matrix83();
 
 int main() {
@@ -14,7 +14,7 @@ int main() {
     cin >> crs;
     switch (crs) { //Menu
         case 1: 
-            matrix43(); 
+            matrix46(); 
             break;
         case 2:
             matrix83(); 
@@ -32,22 +32,27 @@ int main() {
 
 // Функція для введення матриці
 void inputMatrix(int matrix[][MAX_SIZE], int &M, int &N) {
+    bool chk = true;
     
-    cout << "Enter matrix size(row col): " << endl;
+    while(chk){
+        
+    cout << "Enter matrix size(row col): ";
     cin >> M >> N;
-    cout << "Enter matrix elements: " << endl;
     
-    if (M > MAX_SIZE || N > MAX_SIZE) {
-        cout << "0" << endl;
-        return;
-    }
-
-    for (int i = 0; i < M; ++i) {
-        for (int j = 0; j < N; ++j) {
-            cin >> matrix[i][j];
+    if (M <= MAX_SIZE || N <= MAX_SIZE) {
+        cout << "Enter matrix elements: ";
+        for (int i = 0; i < M; ++i) {
+            for (int j = 0; j < N; ++j) {
+                cin >> matrix[i][j];
         }
     }
     cout << "You entered this";
+    chk = false;
+}
+    else {
+        cout << "Error: matrix size is too big" << endl;
+    }
+}
 }
 
 // Перевірка, чи є елемент максимальним у своєму рядку
@@ -110,10 +115,13 @@ void zeroingMatrix(int matrix[][MAX_SIZE], int M) {
     cout << "Zeroed ";
 }
 
-int matrix43() {
+
+
+
+int matrix46() {
     int M, N;
-    
     int matrix[MAX_SIZE][MAX_SIZE];
+
     inputMatrix(matrix, M, N);     
     printMatrix(matrix, M, N);      
     findAndPrintResults(matrix, M, N);
