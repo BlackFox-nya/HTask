@@ -35,7 +35,7 @@ void displayMenu();
 // ======================= MAIN =======================
 int main() {
     int choice;
-    do {
+    while (choice != 4){
         displayMenu();
         cin >> choice;
         switch (choice) {
@@ -45,7 +45,7 @@ int main() {
             case 4: cout << "Вихід...\n"; break;
             default: cout << "Невірний вибір!\n";
         }
-    } while (choice != 4);
+    }
     return 0;
 }
 
@@ -119,17 +119,9 @@ void writeResultsToFile(const string& filename, const string& content, bool appe
     }
     file << content << endl;
     file.close();
+    cout << "Результати дописано у файл: " << filename << endl;
 }
 
-void saveSortedCharsToFile(const char arr[], int size, const string& filename) {
-    ofstream file(filename);
-    if (!file.is_open()) {
-        cout << "Помилка створення файлу: " << filename << endl;
-        return;
-    }
-    for (int i = 0; i < size; i++) file << arr[i] << " ";
-    file.close();
-}
 
 // ------------------- Обробка масиву -------------------
 void expandOddNumbers(int arr[], int& arrN) {
@@ -196,11 +188,8 @@ void insertionSort(char arr[], int size) {
 
 void taskMatrix46() {
     cout << "\n******* Matrix_46 *******\n";
-    int n, matrix[MAX_SIZE][MAX_SIZE], M = 0, N = 0;
-    cout << "Введіть номер варіанту (n): ";
-    cin >> n;
-
-    string filename = "matr_in_" + to_string(n) + ".txt";
+    int matrix[MAX_SIZE][MAX_SIZE], M = 0, N = 0;
+    string filename = "matr_in_1.txt";
     readMatrixFromFile(filename, matrix, M, N);
 
     if (M == 0 || N == 0) {
@@ -210,16 +199,13 @@ void taskMatrix46() {
 
     string result = findSaddlePoints(matrix, M, N);
     writeResultsToFile(filename, "\n// Результати:\n" + result);
-    cout << "Результати дописано у файл: " << filename << endl;
+    
 }
 
 void taskArray111() {
     cout << "\n******* Array_111 *******\n";
-    int n, arr[MAX_SIZE], arrN = 0;
-    cout << "Введіть номер варіанту (n): ";
-    cin >> n;
-
-    string filename = "array_in_" + to_string(n) + ".txt";
+    int arr[MAX_SIZE], arrN = 0;
+    string filename = "array_in_1.txt";
     readArrayFromFile(filename, arr, arrN);
 
     if (arrN == 0) {
@@ -231,16 +217,13 @@ void taskArray111() {
     string result;
     for (int i = 0; i < arrN; i++) result += to_string(arr[i]) + " ";
     writeResultsToFile(filename, "\n// Результати:\n" + result);
-    cout << "Результати збережено у файл: " << filename << endl;
 }
 
 void taskSort() {
     cout << "\n******* Сортування *******\n";
     char arr[MAX_SIZE];
     int size = 0;
-    string filename;
-    cout << "Введіть ім'я вхідного файлу: ";
-    cin >> filename;
+    string filename = "letters_1.txt";
 
     readCharsFromFile(filename, arr, size);
     if (size == 0) {
@@ -249,8 +232,14 @@ void taskSort() {
     }
 
     insertionSort(arr, size);
-    saveSortedCharsToFile(arr, size, "array_out_1.txt");
-    cout << "Відсортований масив: ";
-    for (int i = 0; i < size; i++) cout << arr[i] << " ";
-    cout << "\nРезультати збережено у array_out_1.txt\n";
+
+    // Перетворення масиву символів у рядок
+    string content;
+    for (int i = 0; i < size; i++) {
+        content += arr[i];
+        if (i != size - 1) content += " "; // Додаємо пробіл, крім останнього символу
+    }
+
+    // Запис у файл через універсальну функцію (перезаписуємо файл)
+    writeResultsToFile(filename, content, false);
 }
