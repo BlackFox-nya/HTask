@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/blackfox/source/HTask/LAB8",
-      "program": "/home/blackfox/source/HTask/LAB8/build/Debug/outDebug",
+      "cwd": "/home/blackfox/source/HTask",
+      "program": "/home/blackfox/source/HTask/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
