@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/lab8.dir/data_io.cpp.o CMakeFiles/lab8.dir/main.cpp.o CMakeFiles/lab8.dir/processing.cpp.o -o lab8

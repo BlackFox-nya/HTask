@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/blackfox/source/HTask/LAB8_byfile/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/lab8.dir/data_io.cpp.o -c /home/blackfox/source/HTask/LAB8_byfile/data_io.cpp",
+  "file": "/home/blackfox/source/HTask/LAB8_byfile/data_io.cpp",
+  "output": "CMakeFiles/lab8.dir/data_io.cpp.o"
+},
+{
+  "directory": "/home/blackfox/source/HTask/LAB8_byfile/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/lab8.dir/main.cpp.o -c /home/blackfox/source/HTask/LAB8_byfile/main.cpp",
+  "file": "/home/blackfox/source/HTask/LAB8_byfile/main.cpp",
+  "output": "CMakeFiles/lab8.dir/main.cpp.o"
+},
+{
+  "directory": "/home/blackfox/source/HTask/LAB8_byfile/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/lab8.dir/processing.cpp.o -c /home/blackfox/source/HTask/LAB8_byfile/processing.cpp",
+  "file": "/home/blackfox/source/HTask/LAB8_byfile/processing.cpp",
+  "output": "CMakeFiles/lab8.dir/processing.cpp.o"
+}
+]
