@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/lab8.dir/link.d CMakeFiles/lab8.dir/data_io.cpp.o CMakeFiles/lab8.dir/main.cpp.o CMakeFiles/lab8.dir/processing.cpp.o -o lab8
