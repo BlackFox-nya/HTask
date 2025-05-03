@@ -5,11 +5,11 @@ using namespace std;
 
 const char * fn = "bukavy.txt";
 const char * fno = "bukavy_out.txt";
+const int MAX_WORDS = 100;
 
-// for(file >> s; !file.eof(); file >> s){ coud << s << endl}
-int lineNum(ifstream& fl){
+size_t lineNum(ifstream& fl){
     string line;
-    int lineCount = 0;
+    size_t lineCount = 0;
 
     while (getline(fl, line)) {
         ++lineCount;
@@ -47,14 +47,14 @@ string removeExtraSpaces(const string& input) {
 }
 
 
-int splitWords(const string& input, string words[], int maxWords) {
+int splitWords(const string& input, string words[]) {
     int count = 0;
     int start = 0;
     int len = input.length();
 
     for (int i = 0; i <= len; ++i) {
         if (i == len || input[i] == ' ') {
-            if (count < maxWords) {
+            if (count < MAX_WORDS) {
                 words[count++] = input.substr(start, i - start);
                 start = i + 1;
             }
@@ -79,12 +79,12 @@ string reverseWordOrder(string words[], int count) {
 
 string reverseWords(string& input) {
     string cleaned = removeExtraSpaces(input);
-
-    const int MAX_WORDS = 100;
     string words[MAX_WORDS];
-    int wordCount = splitWords(cleaned, words, MAX_WORDS);
-
-    return reverseWordOrder(words, wordCount);
+    int wordCount = splitWords(cleaned, words);
+    if (chkLine(reverseWordOrder(words, wordCount))){
+        return reverseWordOrder(words, wordCount);
+    }
+    return "This line isn't appropriate, please provide strings with spaces.";
 }
 
 string getLineFromFile(ifstream& fl, int targetLine) {
@@ -101,6 +101,6 @@ string getLineFromFile(ifstream& fl, int targetLine) {
     }
 
     // Если дошли до конца и не нашли строку
-    cerr << "Строка с номером " << targetLine << " не найдена.\n";
+    cerr << "Line " << targetLine << " not found.\n";
     return "";
 }
