@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
 
+// struct for base nums
 struct nums
 {
     double a, b;
 };
 
+// struct for calculated nums
 struct cal_nums
 {
     double a2, b2, sum, diff, mult, div;
 };
 
+// function that calculates all needed calculations
 void do_cal(cal_nums& cn, nums& n){
     cn.a2 = n.a * n.a;
     cn.b2 = n.b * n.b;
@@ -20,6 +23,7 @@ void do_cal(cal_nums& cn, nums& n){
     cn.div = cn.a2 / cn.b2;
 }
 
+//input function
 void bn10_input(nums& n){
     bool chk;
     chk = true;
@@ -36,6 +40,7 @@ void bn10_input(nums& n){
     }
 }
 
+// output function
 void bn10_output(cal_nums& n){
     cout << "a^2 = " << n.a2 << endl;
     cout << "b^2 = " << n.b2 << endl;

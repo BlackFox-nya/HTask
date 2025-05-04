@@ -4,6 +4,8 @@
 #include "bool30.h"
 using namespace std;
 
+
+// param 87 main function
 void param87(){
     TTime t[5];
     for (int i = 0; i < 5; i++)
@@ -18,6 +20,7 @@ void param87(){
     }
 }
 
+// begin 10 main function
 void begin10(){
     nums n;
     cal_nums cn;
@@ -26,6 +29,7 @@ void begin10(){
     bn10_output(cn);
 }
 
+// bool30 main function
 void bool30(){
     triag t;
     triagInput(t);
@@ -33,6 +37,7 @@ void bool30(){
     bool30Print(t);
 }
 
+// menu function
 int main(){
     bool chk;
     chk = true;

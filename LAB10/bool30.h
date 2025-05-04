@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
+// triandle structure
 struct triag
 {
     int a, b, c;
     bool isEqu;
 };
 
+// function for triangle input 
 void triagInput(triag& t){
     bool chk;
     chk = true;
@@ -25,6 +27,7 @@ void triagInput(triag& t){
 }
 }
 
+// function that checks if triangle has equal sides
 void triagChk(triag& t){
     if (t.a == t.b && t.a == t.c && t.c == t.b){
         t.isEqu = true;
@@ -34,6 +37,7 @@ void triagChk(triag& t){
     }
 }
 
+// prints if triangle is equal
 void bool30Print(triag& t){
     if (t.isEqu){
         cout << "This triangle has equal sides \n";

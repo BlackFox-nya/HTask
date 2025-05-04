@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Site BuildName="Linux-g++"
-	BuildStamp="20250504-1112-Experimental"
+<Site BuildName="Linux-c++"
+	BuildStamp="20250504-1848-Experimental"
 	Name="fedora"
 	Generator="ctest-3.31.6"
-	CompilerName="/usr/bin/g++"
+	CompilerName="/usr/bin/c++"
 	CompilerVersion="15.1.1"
 	OSName="Linux"
 	Hostname="fedora"
@@ -22,14 +22,14 @@
 	TotalVirtualMemory="8191"
 	TotalPhysicalMemory="15216"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="4390.23"
+	ProcessorClockFrequency="4466.25"
 	>
 	<Testing>
-		<StartDateTime>May 04 22:32 EEST</StartDateTime>
-		<StartTestTime>1746387175</StartTestTime>
+		<StartDateTime>May 04 21:51 EEST</StartDateTime>
+		<StartTestTime>1746384669</StartTestTime>
 		<TestList/>
-		<EndDateTime>May 04 22:32 EEST</EndDateTime>
-		<EndTestTime>1746387175</EndTestTime>
+		<EndDateTime>May 04 21:51 EEST</EndDateTime>
+		<EndTestTime>1746384669</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
