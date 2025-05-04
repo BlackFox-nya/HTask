@@ -135,7 +135,6 @@ CMakeFiles/LAB9.dir/main.cpp.o: /home/blackfox/source/HTask/LAB9/main.cpp \
  /usr/include/c++/15/bits/ostream.tcc /usr/include/c++/15/istream \
  /usr/include/c++/15/bits/istream.tcc \
  /home/blackfox/source/HTask/LAB9/task1_25.h \
- /home/blackfox/source/HTask/LAB9/nya.h \
  /home/blackfox/source/HTask/LAB9/task2_50.h /usr/include/c++/15/fstream \
  /usr/include/c++/15/bits/codecvt.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \

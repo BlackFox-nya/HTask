@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20250504-1112-Experimental"
+	Name="fedora"
+	Generator="ctest-3.31.6"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="15.1.1"
+	OSName="Linux"
+	Hostname="fedora"
+	OSRelease="6.14.4-300.fc42.x86_64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Fri Apr 25 15:43:38 UTC 2025"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="25"
+	ModelID="68"
+	ModelName="AMD Ryzen 7 7735HS with Radeon Graphics"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15216"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="4386.62"
+	>
+	<Testing>
+		<StartDateTime>May 04 21:12 EEST</StartDateTime>
+		<StartTestTime>1746382333</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 04 21:12 EEST</EndDateTime>
+		<EndTestTime>1746382333</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
