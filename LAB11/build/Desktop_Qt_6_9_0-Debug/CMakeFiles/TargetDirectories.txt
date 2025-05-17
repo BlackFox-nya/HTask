@@ -1,0 +1,9 @@
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/LAB11.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/edit_cache.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/rebuild_cache.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/list_install_components.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/local.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/strip.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/LAB11_autogen_timestamp_deps.dir
+/home/blackfox/source/HTask/LAB11/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/LAB11_autogen.dir
