@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/blackfox/source/HTask/CALC/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/calc.dir/main.cpp.o -c /home/blackfox/source/HTask/CALC/main.cpp",
+  "file": "/home/blackfox/source/HTask/CALC/main.cpp",
+  "output": "CMakeFiles/calc.dir/main.cpp.o"
+}
+]
