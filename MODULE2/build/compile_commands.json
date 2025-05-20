@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/blackfox/source/HTask/MODULE2/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/module2.dir/main.cpp.o -c /home/blackfox/source/HTask/MODULE2/main.cpp",
+  "file": "/home/blackfox/source/HTask/MODULE2/main.cpp",
+  "output": "CMakeFiles/module2.dir/main.cpp.o"
+}
+]
