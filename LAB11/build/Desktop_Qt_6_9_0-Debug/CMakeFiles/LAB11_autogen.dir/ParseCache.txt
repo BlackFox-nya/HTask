@@ -435,6 +435,6 @@
  mdp:/usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h
  mdp:/usr/lib/gcc/x86_64-redhat-linux/15/include/stdbool.h
  mdp:/usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
+/home/blackfox/source/HTask/LAB11/main.cpp
 /home/blackfox/source/HTask/LAB11/mainwindow.cpp
  uic:./ui_mainwindow.h
-/home/blackfox/source/HTask/LAB11/main.cpp

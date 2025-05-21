@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+// When button is pushed - do calculations
 void MainWindow::on_pushButton_clicked()
 {
     int day, stday, dayOfWeek;
@@ -23,10 +23,15 @@ void MainWindow::on_pushButton_clicked()
     bool chk;
     chk = true;
     day = ui->lineEdit->text().toInt();
+
+
+    // Check if day is out of range
     if (day < 1 || day > 365){
         QMessageBox::warning(this, "ERROR!", "Input is out of range, range is [1; 365]");
         chk = false;
     }
+
+    // Do calculations if day is in range. Output string and number to be fancy :)
     if (chk){
         dayOfWeek = (stday + (day - 1)) % 7;
         QString days[]{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
