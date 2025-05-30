@@ -90,7 +90,7 @@ public:
         actionSave->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
         actionLoad->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "EX2 label", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Calculate", nullptr));
         res->setText(QCoreApplication::translate("MainWindow", "Result", nullptr));
         resname->setText(QCoreApplication::translate("MainWindow", "Result name", nullptr));
         menuLoad->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
